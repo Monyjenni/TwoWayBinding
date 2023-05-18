@@ -2,7 +2,8 @@
   <div id="app">
     <h1 class="h1">Course Tutorial</h1>
     {{ greeting }}
-    <input v-model="greeting" />
+    <!-- !!! is to add in console -->
+    <input @keyup.enter="greet(greeting + '!!!!!')" v-model="greeting" />
     <hr />
     <!-- v-if is used when we set true to that var in script is true -->
     <!-- v-show is the same as v-if on DOM but there is still on there ,the diff is display: none-->
@@ -23,14 +24,22 @@ export default {
   data() {
     return {
       data: 0,
-      greeting: "Hey Friend!",
+      greeting: "Sup Jen",
       isVisible: false,
       // isVisible1: false,
     };
   },
+  // method here is a function that is associated with a class or an object, and define the behavior of the class or object.
+  //toggle here is an event
+  //event --> method
   methods: {
     toggleBox() {
+      // this here is a constructor that initialize an object when it is created.
       this.isVisible = !this.isVisible;
+    },
+    greet(greeting) {
+      //greeting is passed so no need to this for initialization
+      console.log(greeting);
     },
   },
 };
