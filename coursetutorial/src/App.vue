@@ -11,7 +11,7 @@
     <!-- ------------------------------------------------------------------------------------------------------------- -->
     <!-- even&method -->
     <!-- @ is same as v-on: -->
-    <button @click="toggleBox">Toggle Box</button>
+    <button @click.prevent.stop="toggleBox">Toggle Box</button>
     <div v-if="isVisible" class="box"></div>
     <!-- <div v-else-if="isVisible1" class="box-two"></div>
     <div v-else class="box-three"></div> -->
