@@ -37,9 +37,9 @@ export default {
   font-weight: 50px;
 }
 .box {
-  background-color: pink;
-  height: 200px;
-  width: 200px;
+  background-image: url("one_piece.jpg");
+  height: 1000px;
+  width: 1000px;
 }
 .box-two {
   background-color: aqua;
